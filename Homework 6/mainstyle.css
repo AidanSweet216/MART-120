@@ -1,0 +1,10 @@
+body{
+    background-image: url('pictures/backwall.jpg');
+    background-position: center;
+}
+#specificStyle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large
+
+}
+
