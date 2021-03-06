@@ -33,11 +33,12 @@
                         document.getElementById("eMail").style.backgroundColor = "white"
                     }
                 var terms;
-                 terms = document.getElementById("Accept").checked
+                 terms = document.getElementsByName("Accept").checked;
                  if(terms[0] == false)
                  {
                     window.alert("test")
                  } 
+             
               
             } 
         </script>
@@ -52,8 +53,8 @@
             </tr>
 
             <h4>Accept terms of service</h4>
-            <input type="radio" id="Accept" value="yes">Yes<br>
-            <input type="radio" id="Accept" value="no">No<br>
+            <input type="radio" name="Accept" value="yes">Yes<br>
+            <input type="radio" name="Accept" value="no">No<br>
                 <button id="btnSubmit" onClick="checkForm();">Submit</button>
         </table>    
     </body>
