@@ -33,16 +33,15 @@
                         document.getElementById("eMail").style.backgroundColor = "white"
                     }
                 var terms;
-                 terms = document.getElementsByName("Accept").checked;
-                 if(terms == false)
+                 terms = document.getElementsByName("Accept");
+                 if(terms[0].checked == false)
                  {
-                    window.alert("test")
-                    document.getElementsByName("Accept").style.backgroundColor ="red"
+                    window.alert("Please accept our terms")
                     document.getElementsByName("Accept").focus();
                  } 
                  else
                  {
-                     window.alert("Thank you")
+                    window.alert("Thank you!")
                  }
              
               
