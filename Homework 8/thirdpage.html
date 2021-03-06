@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    <h1> Contact us</h1>
+    <body>
+        <script>
+             function checkForm()
+            {
+                var name;
+                name = document.getElementById("fName").value;
+                if(name == "")
+                {
+                    window.alert("Name is required");
+                    document.getElementById("fName").style.backgroundColor = "red";
+                    document.getElementById("fName").focus();
+                }
+                else
+                {
+                    document.getElementById("fName").style.backgroundColor = "white";
+                }
+                    var email;
+                    email = document.getElementById("eMail").value;
+                    if(email == "")
+                    {
+                        window.alert("Email is required");
+                        document.getElementById("eMail").style.backgroundColor = "red"
+                        document.getElementById("eMail").focus();
+                    }
+                    else
+                    {
+                        document.getElementById("eMail").style.backgroundColor = "white"
+                    }
+                var terms;
+                 terms = document.getElementById("Accept").checked
+                 if(terms[0] == false)
+                 {
+                    window.alert("test")
+                 } 
+              
+            } 
+        </script>
+           
+                   
+        <table>
+            <tr>
+            Name: <input type="text" id="fName"><br>
+            </tr>
+            <tr>
+           <br> Email: <input typer="text" id="eMail"><br>
+            </tr>
+
+            <h4>Accept terms of service</h4>
+            <input type="radio" id="Accept" value="yes">Yes<br>
+            <input type="radio" id="Accept" value="no">No<br>
+                <button id="btnSubmit" onClick="checkForm();">Submit</button>
+        </table>    
+    </body>
+</html>
