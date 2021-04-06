@@ -139,8 +139,9 @@ function characterMovement()
         }
         function mousePressed()
 {
-    mouseShapeX = mouseX;
-    mouseShapeY = mouseY;
+    mouseShapex = mouseX;
+    mouseShapey = mouseY;
+    
 }
 
         
