@@ -32,8 +32,8 @@ function draw()
     //call enemy
     createEnemy();
     //mouse event
-    creatCircle();
     mousePressed();
+    creatCircle();
     //call movement
     characterMovement();
     //exit message
