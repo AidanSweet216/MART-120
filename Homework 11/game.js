@@ -103,7 +103,7 @@ function draw()
     {
         shapeY2 = height
     }
-    if(playerX > width && playerY > width-50)
+    if(playerX > width && playerY > width)
     {
        
         fill(0);
