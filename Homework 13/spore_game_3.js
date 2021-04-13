@@ -18,7 +18,8 @@ var mouseShapey;
 function setup()
 {
     createCanvas(500,600);
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < 50; i++) 
+    {
     shapeXSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     shapeYSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     myXs[0] = 200;
@@ -92,35 +93,16 @@ function characterMovement()
             textSize(50);
             text("You Win!", width/2-50, height/2-50);
         }
-    }
+     }
         function createEnemy()
         {
             fill(130);
-            circle(myXs[0],myYs[0],myDiameters[0]);
-            for (var i = 0; i < 50; i++) {
-                shapeXSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
-                shapeYSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+
+                circle(myXs[0], myYs[0], myDiameters[0]);
+                myXs[0] + shapeXSpeed[i];
+                myYs[0] + shapeYSpeed[i];
+               
             }
-            myXs[0] += shapeXSpeed[i];
-            myYs[0] += shapeYSpeed[i];
-        if(myXs > width)
-        {
-            myXs = 0;
-        }
-        else if(myXs < 0)
-        {
-            myXs = width;
-        }
-        if(myYs > height)
-        {
-            myYs = 0;
-        }
-        else if(myYs < 0)
-        {
-            myYs = height;
-        }
-        
-    } 
         function creatCircle()
         {
             fill(120);
@@ -130,7 +112,4 @@ function characterMovement()
 {
     mouseShapex = mouseX;
     mouseShapey = mouseY;
-    
 }
-
-        
