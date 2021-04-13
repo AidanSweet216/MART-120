@@ -23,8 +23,20 @@ function setup()
     shapeXSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     shapeYSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     myXs[0] = 200;
+    myXs[1] = 300;
+    myXs[2] = 150;
+    myXs[3] = 350;
+    myXs[4] = 400;
     myYs[0] = 250;
+    myYs[1] = 350;
+    myYs[2] = 200;
+    myYs[3] = 400;
+    myYs[4] = 500;  
+    myDiameters[1] = 75;
     myDiameters[0] = 50;
+    myDiameters[2] = 45;
+    myDiameters[3] = 60;
+    myDiameters[4] = 35;
     }
 }
 function draw()
@@ -97,11 +109,29 @@ function characterMovement()
         function createEnemy()
         {
             fill(130);
-
-                circle(myXs[0], myYs[0], myDiameters[0]);
-                myXs[0] + shapeXSpeed[i];
-                myYs[0] + shapeYSpeed[i];
-               
+            for(var i = 0; i < myXs.length; i++)
+            {
+                circle(myXs[i],myYs[i],myDiameters[i]);
+                myXs[i] += shapeXSpeed[i];
+                myYs[i] += shapeXSpeed[i];
+                if(myXs[i] > width)
+                {
+                    myXs[i] = 0;
+                }
+                else if(myXs[i] < 0)
+                {
+                    myXs[i] = width;
+                }
+                if(myYs[i] > height)
+                {
+                    myYs[i] = 0;
+                }
+                else if(myYs[i] < 0)
+                {
+                    myYs[i] = height;
+                }
+            }
+              
             }
         function creatCircle()
         {
