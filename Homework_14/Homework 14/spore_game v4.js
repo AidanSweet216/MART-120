@@ -28,7 +28,7 @@ function setup()
     for(var i = 0; i < 10; i++)
     {
     
-        triangleArray[i] = new triangleClass(random(100), random(100), random(100), random(100), random(100), random(100), random(255), random(255), random(255));
+        triangleArray.push(new triangleClass(random(100), random(100), random(100), random(100), random(100), random(100), random(255), random(255), random(255)));
     }
     
     for (var i = 0; i < 50; i++) 
