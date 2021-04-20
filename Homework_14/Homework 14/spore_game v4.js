@@ -17,17 +17,15 @@ var mouseShapex;
 var mouseShapey;
 //class shapes
 var triangleObject;
-var triangleArray = [];
+var triangleObject2;
 function setup()
 {
     createCanvas(500,600);
+    
     //create triangle
-    for(var i = 0; i < 10; i++)
-{
-
-    triangleArray[i] = new triangleClass(random(100), random(100), random(100), random(100), random(100), random(100), random(255), random(255), random(255));
-}
-
+    // send in 9 arguments into the constructor
+    triangleObject = new triangleClass(100,100,200,200,150,50,120,120,120);
+    triangleObject2 = new triangleClass2(50,50,75,75,150,50,120,120,120);
     for (var i = 0; i < 50; i++) 
     {
     shapeXSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
@@ -52,6 +50,7 @@ function setup()
 function draw()
 {
     background(120,45,78);
+
     //call character
     createCharacter();
     //call borders
@@ -68,11 +67,9 @@ function draw()
     text("Exit",425,530)
     //check for win
     playerWin();
-    for(var i = 0; i =triangleArray.length; i++)
-{
-   triangleArray[i].display();
-}
-
+    
+    // draw the triangle from the object
+    triangleObject.display();
 }
 //create a character
 function createCharacter()
