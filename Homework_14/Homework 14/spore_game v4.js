@@ -27,7 +27,6 @@ function setup()
     //create triangle
     // send in 9 arguments into the constructor
     triangleObject = new triangleClass(100,100,200,200,150,50,120,120,120);
-    triangleObject2 = new triangleClass2(50,50,75,75,150,50,120,120,120);
     for (var i = 0; i < 50; i++) 
     {
     shapeXSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
