@@ -55,13 +55,6 @@ function setup()
 function draw()
 {
     background(120,45,78);
-
-    for(var i = 0; i =triangleArray.length; i++)
-{
-   triangleArray[i].display();
-}
-
-
     //call character
     createCharacter();
     //call borders
@@ -80,7 +73,10 @@ function draw()
     playerWin();
     
     // draw the triangle from the object
-    triangleObject.display();
+    for(var i = 0; i =triangleArray.length; i++)
+    {
+       triangleArray[i].display();
+    }
 }
 //create a character
 function createCharacter()
