@@ -21,7 +21,8 @@ function setup()
 {
     createCanvas(500,600);
     //create triangle
-    triangleObject = new triangle(50,50,75,75,90,90);
+    triangleObject = new triangleClass(50,50,100,100,90,150,175,100,220);
+    
     for (var i = 0; i < 50; i++) 
     {
     shapeXSpeed [i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
