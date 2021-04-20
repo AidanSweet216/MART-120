@@ -73,7 +73,7 @@ function draw()
     playerWin();
     
     // draw the triangle from the object
-    for(var i = 0; i =triangleArray.length; i++)
+    for(var i = 0; i <triangleArray.length; i++)
     {
        triangleArray[i].display();
     }
