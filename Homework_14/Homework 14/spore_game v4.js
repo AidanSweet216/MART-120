@@ -1,3 +1,5 @@
+
+
 //character variables
 var characterX = 100;
 var characterY = 100;
