@@ -25,6 +25,8 @@ function setup()
     myYs[0] = 200;
     myXs[1] = 30;
     myYs[1] = 300;
+    myXs[2] = 45;
+    myYs[2] = 400;
     }
 }
 
@@ -40,7 +42,13 @@ function draw()
    //create enemey
    createEnemy();
    //detect hit
-   hit();
+   if(circle.collide(rect))
+   {
+    characterX = 0;
+    characterY = 0;
+   }
+    playerWin();
+
 
 }
 
@@ -108,11 +116,14 @@ function createEnemy()
     }
     
 }
-function hit()
-{
-    if(circle.overlap(rect))
-    {
-        characterX = 400;
-        characterY = 60;
+
+function playerWin()
+     {
+        if(characterX > width && characterY > width-50)
+        {
+            fill(0);
+            stroke(5);
+            textSize(50);
+            text("You Win!", width/2-50, height/2-50);
+        }
     }
-}
