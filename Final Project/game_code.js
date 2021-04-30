@@ -41,7 +41,6 @@ function draw()
    background(175,100,220);
    //call character
    createCharacter();
-   drawSprites();
    //call movemant
    characterMovement();
    //call boarders
@@ -59,7 +58,7 @@ function draw()
 function createCharacter()
 {
     fill(20,75,200);
-  createSprite(characterX,characterY,25);
+  circle(characterX,characterY,35);
   
 
 }
