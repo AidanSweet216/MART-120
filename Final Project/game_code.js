@@ -133,6 +133,6 @@ function playerWin()
             fill(0);
             stroke(5);
             textSize(50);
-            text("You Win!", width/2-50, height/2-50);
+            text("You Win!",300,300);
         }
     }
