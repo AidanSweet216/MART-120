@@ -66,19 +66,19 @@ function characterMovement()
      //key controls
      if(keyIsDown(w))
      {
-         characterY -= 10;   
+         characterY -= 5;   
      }
      if(keyIsDown(s))
      {
-         characterY += 10;   
+         characterY += 5;   
      }
      if(keyIsDown(a))
      {
-         characterX -= 10;   
+         characterX -= 5;   
      }
      if(keyIsDown(d))
      {
-         characterX += 10;   
+         characterX += 5;   
      }
     }
     function createBorders()
