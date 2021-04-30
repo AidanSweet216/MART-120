@@ -42,7 +42,6 @@ function draw()
    //create enemey
    createEnemy();
    //detect hit
-   hitDectect();
 
 }
 
@@ -109,10 +108,4 @@ function createEnemy()
         }
     }
     
-}
-function hitDectect()
-{
-    hit = collideRectCircle(myXs[i],myYs[i], eLength, eWidth, characterX, characterY, 50);
-
-    stroke(hit ? color('red') : 0);
 }
