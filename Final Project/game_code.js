@@ -6,8 +6,6 @@ var w = 87;
 var a = 65;
 var s = 83;
 var d = 68;
-//hit detection
-var hit = false;
 //enemy variables
 var myXs = [];
 var myYs = [];
@@ -42,6 +40,7 @@ function draw()
    //create enemey
    createEnemy();
    //detect hit
+   hit();
 
 }
 
@@ -108,4 +107,12 @@ function createEnemy()
         }
     }
     
+}
+function hit()
+{
+    if(circle.overlap(rect))
+    {
+        characterX = 400;
+        characterY = 60;
+    }
 }
