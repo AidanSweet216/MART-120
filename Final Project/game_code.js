@@ -13,7 +13,7 @@ var shapeXSpeed = [];
 var shapeYSpeed = [];
 var eLength = 150;
 var eWidth = 20;
-
+window.alert("GET TO THE EXIT, AVOID RECTANGLES!")
 function setup()
 {
     createCanvas(800,600);
@@ -27,6 +27,12 @@ function setup()
     myYs[1] = 300;
     myXs[2] = 45;
     myYs[2] = 400;
+    myXs[3] = 40;
+    myYs[3] = 500;
+    myXs[4] = 50;
+    myYs[4] = 550;
+    
+    
     }
 }
 
@@ -41,21 +47,18 @@ function draw()
    createBorders();
    //create enemey
    createEnemy();
-   //detect hit
-   if(circle.collide(rect))
-   {
-    characterX = 0;
-    characterY = 0;
-   }
-    playerWin();
-
-
+   //check for win
+   playerWin();
+   //exit message
+   fill(0)
+    textSize(30);
+    text("Exit",400,590)
 }
 
 function createCharacter()
 {
     fill(20,75,200);
-    circle(characterX,characterY,50);
+    circle(characterX,characterY,35);
 
 }
 function characterMovement()
@@ -80,19 +83,24 @@ function characterMovement()
     }
     function createBorders()
 {
+    fill(0,0,0)
     // top border
     rect(0,0,800,30);
     // left border
     rect(0,30,30,600);
     // bottom border
-    rect(775,30,30,600);
+    rect(770,30,30,575);
     // right border
     rect(0,800,600,30);
+    //bottom
+    rect(30,575,325,30)
+    rect(500,575,325,30)
+
 }
 function createEnemy()
 {
     //first enemy
-    fill(255,204,0);
+    fill(255,0,0);
     for(var i = 0; i < myXs.length; i++)
     {
         rect(myXs[i],myYs[i],eLength,eWidth);
@@ -119,7 +127,7 @@ function createEnemy()
 
 function playerWin()
      {
-        if(characterX > width && characterY > width-50)
+        if(characterY > 600)
         {
             fill(0);
             stroke(5);
